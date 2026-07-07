@@ -32,6 +32,7 @@
 
 <div class="tabs">
   <div class="tab active" onclick="showTab('privacy')">개인정보처리방침</div>
+  <div class="tab" onclick="showTab('delete')">계정 삭제</div>
   <div class="tab" onclick="showTab('terms')">서비스이용약관</div>
   <div class="tab" onclick="showTab('risk')">투자위험고지</div>
   <div class="tab" onclick="showTab('refund')">환불정책</div>
@@ -91,8 +92,8 @@
   <div class="section">
     <div class="section-title">제7조 개인정보의 열람, 정정, 삭제</div>
     <div class="section-body">회원은 자신의 개인정보에 대해 열람, 정정, 삭제를 요청할 수 있습니다.
-· 요청 방법: 고객센터 문의
-· 처리 기간: 요청일로부터 10일 이내</div>
+· 요청 방법: 고객센터 문의 또는 본 페이지 「계정 삭제」 탭 참고
+· 처리 기간: 요청일로부터 10영업일 이내</div>
   </div>
 
   <div class="section">
@@ -135,6 +136,73 @@
     <div class="section-body">· 개인정보분쟁조정위원회 (www.kopico.go.kr)
 · 대검찰청 고소수사과 (www.spo.go.kr)
 · 경찰청 사이버수사국 (www.cyber.go.kr)</div>
+  </div>
+</div>
+
+<!-- 계정 삭제 (Google Play 계정 삭제 URL용) -->
+<div id="delete" class="content">
+  <h2>계정 및 데이터 삭제 안내</h2>
+  <p class="date">앱: 오늘의 종목 (kr.ats.stockapp) | 개발사: 주식회사 에이티에스그룹</p>
+
+  <div class="section">
+    <div class="section-title">1. 계정 삭제 요청 방법</div>
+    <div class="section-body">「오늘의 종목」 앱 회원은 아래 방법으로 계정 및 관련 데이터 삭제를 요청할 수 있습니다.
+
+[방법 1] 이메일 요청 (권장)
+1) ATS@atscorp.kr 로 이메일 발송
+2) 제목: [오늘의종목] 계정 삭제 요청
+3) 본문에 아래 정보 기재
+   · 가입 이메일(아이디)
+   · 이름
+   · 연락처(휴대폰번호)
+   · 삭제 사유(선택)
+
+[방법 2] 전화 요청
+· 고객센터: 1577-0294
+· 운영: 평일 10:00~17:30 (점심 12:00~13:00, 공휴일 제외)
+
+본인 확인 후 삭제 처리를 진행합니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">2. 삭제되는 데이터</div>
+    <div class="section-body">계정 삭제 시 아래 데이터는 지체 없이 삭제(또는 복구 불가능한 형태로 파기)합니다.
+
+· Firebase Authentication 로그인 계정
+· 회원 프로필(닉네임, 이메일, 전화번호, 생년월일 등)
+· 등업 신청 정보
+· 관심종목·북마크 등 개인 이용 기록
+· 푸시 알림(FCM) 토큰
+· 서비스 이용과 직접 연결된 기타 개인정보</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">3. 보관되는 데이터 (법령에 따른 보존)</div>
+    <div class="section-body">관련 법령에 따라 아래 정보는 일정 기간 보관될 수 있습니다. 보관 기간 경과 후 지체 없이 파기합니다.
+
+· 계약·결제·환불 관련 기록: 5년 (전자상거래법 등)
+· 세법상 거래 기록: 5년
+· 투자자 보호·분쟁 처리 관련 기록: 5년
+· 수사·소송 등 법적 의무가 있는 경우: 해당 의무 기간까지
+
+※ 익명화·통계 목적 데이터는 개인을 식별할 수 없는 형태로만 보관될 수 있습니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">4. 처리 기간</div>
+    <div class="section-body">· 삭제 요청 접수 후 본인 확인: 1~3영업일
+· 계정 및 데이터 삭제 완료: 요청일로부터 최대 10영업일 이내
+· 완료 시 등록 이메일 또는 SMS로 안내</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">5. 문의</div>
+    <div class="section-body">· 앱명: 오늘의 종목
+· 개발사: 주식회사 에이티에스그룹
+· 대표: 박진훈
+· 이메일: ATS@atscorp.kr
+· 전화: 1577-0294
+· 주소: 경북 경주시 양정로 215, 2층</div>
   </div>
 </div>
 
@@ -263,16 +331,25 @@
 </div>
 
 <script>
+  const TAB_IDS = ['privacy', 'delete', 'terms', 'risk', 'refund'];
+
   function showTab(id) {
     document.querySelectorAll('.tab').forEach((t, i) => {
-      const ids = ['privacy','terms','risk','refund'];
-      t.classList.toggle('active', ids[i] === id);
+      t.classList.toggle('active', TAB_IDS[i] === id);
     });
     document.querySelectorAll('.content').forEach(c => {
       c.classList.toggle('active', c.id === id);
     });
     window.scrollTo(0, 0);
+    if (history.replaceState) {
+      history.replaceState(null, '', id === 'privacy' ? location.pathname : '#' + id);
+    }
   }
+
+  (function initTabFromHash() {
+    const hash = location.hash.replace('#', '');
+    if (TAB_IDS.includes(hash)) showTab(hash);
+  })();
 </script>
 </body>
 </html>

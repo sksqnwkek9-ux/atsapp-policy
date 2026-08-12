@@ -11,7 +11,7 @@
     .header h1 { font-size: 24px; font-weight: 800; }
     .header p { font-size: 13px; margin-top: 6px; opacity: 0.85; }
     .tabs { display: flex; background: white; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 10; overflow-x: auto; }
-    .tab { flex: 1; min-width: 120px; padding: 14px 8px; text-align: center; font-size: 13px; font-weight: 700; color: #888; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap; }
+    .tab { flex: 1; min-width: 110px; padding: 14px 8px; text-align: center; font-size: 13px; font-weight: 700; color: #888; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap; }
     .tab.active { color: #D30000; border-bottom-color: #D30000; }
     .content { display: none; max-width: 720px; margin: 0 auto; padding: 28px 20px 60px; }
     .content.active { display: block; }
@@ -32,10 +32,10 @@
 
 <div class="tabs">
   <div class="tab active" onclick="showTab('privacy')">개인정보처리방침</div>
-  <div class="tab" onclick="showTab('delete')">계정 삭제</div>
   <div class="tab" onclick="showTab('terms')">서비스이용약관</div>
-  <div class="tab" onclick="showTab('risk')">투자위험고지</div>
   <div class="tab" onclick="showTab('refund')">환불정책</div>
+  <div class="tab" onclick="showTab('risk')">투자위험고지</div>
+  <div class="tab" onclick="showTab('delete')">계정 삭제</div>
 </div>
 
 <!-- 개인정보처리방침 -->
@@ -44,60 +44,56 @@
   <p class="date">시행일: 2026년 3월 21일 | 주식회사 에이티에스그룹</p>
 
   <div class="section">
-    <div class="section-title">제1조 총칙</div>
-    <div class="section-body">본 개인정보처리방침은 당사의 개인정보 처리에 관한 방침을 명시하는 것으로, 개인정보보호법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 관련 법령을 준수합니다.</div>
+    <div class="section-title">제1조 (총칙)</div>
+    <div class="section-body">본 개인정보처리방침은 당사의 개인정보 처리에 관한 방침을 명시하는 것으로, 「개인정보 보호법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 등 관련 법령을 준수합니다.</div>
   </div>
 
   <div class="section">
-    <div class="section-title">제2조 수집하는 개인정보의 항목</div>
-    <div class="section-body">당사는 다음과 같은 개인정보를 수집합니다.
-
-1. 필수 수집 항목: 이름, 휴대폰번호, 생년월일, 이메일
-2. 선택 수집 항목: 직업, 재산현황, 투자경험 관련 정보
-고객상담 시: 상담내용, 통화기록</div>
+    <div class="section-title">제2조 (수집하는 개인정보의 항목)</div>
+    <div class="section-body">· 필수 수집 항목: 아이디, 비밀번호, 닉네임
+· 고객상담 시: 상담내용, 통화기록
+· 인앱결제(구독) 진행 시: 스토어(Apple/Google)가 제공하는 결제 식별정보(개인정보가 아닌 구독 상태 확인용 토큰)</div>
   </div>
 
   <div class="section">
-    <div class="section-title">제3조 개인정보의 수집 및 이용 목적</div>
+    <div class="section-title">제3조 (개인정보의 수집 및 이용 목적)</div>
     <div class="section-body">· 회원가입 및 회원관리
-· 투자상담 및 자산관리 서비스 제공
-· 투자상품 추천 및 맞춤형 서비스 제공
+· 불특정다수 대상 일반 투자정보·시장동향 콘텐츠 제공
+· 구독(인앱결제) 상태 확인 및 콘텐츠 이용 권한 부여
 · 고객상담 및 민원처리
-· 서비스 품질 개선 및 마케팅
-· 법적 의무이행 및 분쟁해결</div>
+· 이벤트 및 커뮤니티 안내</div>
   </div>
 
   <div class="section">
-    <div class="section-title">제4조 개인정보의 보유 및 이용 기간</div>
-    <div class="section-body">당사는 원칙적으로 개인정보 수집 및 이용목적이 달성되면 해당 정보를 지체없이 파기합니다. 다만, 관련 법령의 규정에 의하여 보존할 필요가 있는 경우에는 다음과 같이 보관합니다.
-· 계약 또는 구매/판매 기록: 5년
-· 전자상거래 등에서의 소비자보호에 관한 법률: 5년
+    <div class="section-title">제4조 (개인정보의 보유 및 이용 기간)</div>
+    <div class="section-body">· 회원가입 및 관리 기록: 서비스 이용 기간
+· 계약·결제·환불 관련 기록: 5년 (전자상거래법 등)
 · 세법 관련 기록: 5년
-· 투자자보호 기록: 5년</div>
+· 투자자보호 관련 기록: 5년
+· 그 외 정보: 수집일로부터 최대 1년 이내 보관 후 파기</div>
   </div>
 
   <div class="section">
-    <div class="section-title">제5조 개인정보의 제3자 제공</div>
-    <div class="section-body">당사는 개인정보를 원칙적으로 제3자에게 제공하지 않습니다. 다만, 다음의 경우에는 예외로 합니다.
+    <div class="section-title">제5조 (개인정보의 제3자 제공)</div>
+    <div class="section-body">당사는 개인정보를 원칙적으로 제3자에게 제공하지 않습니다. 수집된 개인정보는 당사가 직접 운영하는 서비스(오늘의종목 등) 내부 처리 목적으로만 사용되며, 외부 업체에 제공되지 않습니다. 다만 다음의 경우는 예외입니다.
 · 본인의 명시적인 동의가 있는 경우
-· 법령의 규정에 의하거나 수사기관으로부터 요청이 있는 경우
-· 투자상품 가입, 결제 등을 위해 협력사에 제공하는 경우</div>
+· 법령의 규정에 의하거나 수사기관으로부터 적법한 절차에 따른 요청이 있는 경우</div>
   </div>
 
   <div class="section">
-    <div class="section-title">제6조 개인정보 처리 위탁</div>
-    <div class="section-body">당사는 개인정보 처리업무 일부를 외부에 위탁하고 있습니다.</div>
+    <div class="section-title">제6조 (개인정보 처리 위탁)</div>
+    <div class="section-body">당사는 결제 확인 등 일부 업무를 외부 전산업체(예: Google, Apple, Firebase)에 위탁할 수 있으며, 위탁 시 위탁받는 자와 위탁업무 내용을 사전 고지합니다.</div>
   </div>
 
   <div class="section">
-    <div class="section-title">제7조 개인정보의 열람, 정정, 삭제</div>
+    <div class="section-title">제7조 (개인정보의 열람, 정정, 삭제)</div>
     <div class="section-body">회원은 자신의 개인정보에 대해 열람, 정정, 삭제를 요청할 수 있습니다.
 · 요청 방법: 고객센터 문의 또는 본 페이지 「계정 삭제」 탭 참고
 · 처리 기간: 요청일로부터 10영업일 이내</div>
   </div>
 
   <div class="section">
-    <div class="section-title">제8조 개인정보 보호책임자</div>
+    <div class="section-title">제8조 (개인정보 보호책임자)</div>
     <div class="section-body">· 성명: 박진훈
 · 직책: 대표
 · 이메일: ATS@atscorp.kr
@@ -105,55 +101,210 @@
   </div>
 
   <div class="section">
-    <div class="section-title">제9조 개인정보 보안</div>
-    <div class="section-body">당사는 개인정보 보안을 위해 다음과 같은 기술적, 관리적 조치를 취하고 있습니다.
-· 개인정보는 SSL 또는 TLS 등의 암호화 기술을 이용하여 안전하게 전송됩니다
+    <div class="section-title">제9조 (개인정보 보안)</div>
+    <div class="section-body">· 개인정보는 SSL 또는 TLS 등의 암호화 기술을 이용하여 안전하게 전송됩니다
 · 접근 권한을 제한하고 정기적인 보안 교육을 실시합니다
 · 개인정보를 취급하는 직원은 기밀유지 서약을 체결합니다
 · 주기적인 보안 진단 및 취약점 평가를 실시합니다</div>
   </div>
 
   <div class="section">
-    <div class="section-title">제10조 쿠키 등의 기술 정보 수집</div>
-    <div class="section-body">당사는 사용자의 편의 증진을 위해 다음과 같은 기술정보를 자동으로 수집합니다.
-· IP 주소, 접속 로그, 브라우저 정보, 기기 정보
+    <div class="section-title">제10조 (쿠키 등의 기술 정보 수집)</div>
+    <div class="section-body">· IP 주소, 접속 로그, 브라우저 정보, 기기 정보
 · 쿠키: 사용자의 선호도 및 로그인 정보 저장
 · Web Beacon: 방문 통계 수집</div>
   </div>
 
   <div class="section">
-    <div class="section-title">제11조 미성년자 보호</div>
+    <div class="section-title">제11조 (미성년자 보호)</div>
     <div class="section-body">당사는 만 14세 미만 미성년자의 개인정보를 수집하지 않습니다.</div>
   </div>
 
   <div class="section">
-    <div class="section-title">제12조 개인정보처리방침의 변경</div>
-    <div class="section-body">본 개인정보처리방침은 관련 법령의 변경, 서비스 개선 등으로 인하여 변경될 수 있으며, 변경 사항은 홈페이지의 공지사항을 통해 최소 7일 이전에 공지합니다.</div>
+    <div class="section-title">제12조 (개인정보처리방침의 변경)</div>
+    <div class="section-body">본 개인정보처리방침은 관련 법령의 변경, 서비스 개선 등으로 인하여 변경될 수 있으며, 변경 사항은 앱 내 공지 또는 본 페이지를 통해 최소 7일 이전에 공지합니다.</div>
   </div>
 
   <div class="section">
-    <div class="section-title">제13조 분쟁 해결</div>
+    <div class="section-title">제13조 (분쟁 해결)</div>
     <div class="section-body">· 개인정보분쟁조정위원회 (www.kopico.go.kr)
 · 대검찰청 고소수사과 (www.spo.go.kr)
 · 경찰청 사이버수사국 (www.cyber.go.kr)</div>
   </div>
 </div>
 
-<!-- 계정 삭제 (Google Play 계정 삭제 URL용) -->
+<!-- 서비스이용약관 -->
+<div id="terms" class="content">
+  <h2>서비스 이용약관</h2>
+  <p class="date">시행일: 2026년 3월 21일 | 주식회사 에이티에스그룹</p>
+
+  <div class="section">
+    <div class="section-title">제1조 (목적)</div>
+    <div class="section-body">본 약관은 주식회사 에이티에스그룹(이하 '회사')이 운영하는 '오늘의종목' 서비스의 이용 조건 및 절차를 규정함을 목적으로 합니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제2조 (용어 정의)</div>
+    <div class="section-body">1. '회사'란 본 서비스를 제공하는 주식회사 에이티에스그룹을 의미합니다.
+2. '회원'이란 본 약관에 동의하여 서비스를 이용하는 개인을 의미합니다.
+3. '서비스'란 회사가 제공하는 투자정보, 투자교육, 콘텐츠 등을 포함합니다.
+4. '콘텐츠'란 회사가 제작, 배포하는 모든 형태의 정보 및 자료를 의미합니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제3조 (서비스의 내용)</div>
+    <div class="section-body">· 투자교육 및 학습 자료 제공
+· 불특정다수를 대상으로 한 일반적인 투자정보 분석 및 시장 동향 제공
+· 종목 추천·일일 리포트 등 콘텐츠 제공 (무료 및 유료 구독)
+
+※ 본 서비스는 특정 회원을 대상으로 한 개별 투자자문, 1:1 상담, 맞춤형 투자전략 수립을 제공하지 않습니다. 모든 정보는 불특정다수 회원에게 동일하게 제공되는 일반적 정보입니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제4조 (약관의 변경)</div>
+    <div class="section-body">공지 후 7일 경과 시 효력이 발생합니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제5조 (회원의 의무)</div>
+    <div class="section-body">정확한 정보 제공, 비밀번호 관리, 관계 법령 준수</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제6조 (회원의 금지행위)</div>
+    <div class="section-body">사칭, 폭언, 불법 콘텐츠 게시, 해킹, 저작권 침해</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제7조 (회원 탈퇴)</div>
+    <div class="section-body">탈퇴 시 법정 보존 기간을 제외한 개인정보를 즉시 삭제합니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제8조 (구독 서비스 이용료)</div>
+    <div class="section-body">본 서비스의 일부 콘텐츠는 무료로 제공되며, 스탠다드·프로 구독은 Apple App Store 및 Google Play 인앱결제(자동갱신 구독)를 통해 이용할 수 있습니다.
+
+· 구독 등급: 스탠다드, 프로
+· 결제 주기: 1주 체험 / 1개월 / 6개월 / 1년 (등급별 상이)
+· 정확한 상품별 가격은 실제 결제가 이루어지는 각 스토어(App Store / Google Play) 내 구독 화면에 표시된 가격을 기준으로 하며, 스토어 정책에 따라 사전 고지 후 변경될 수 있습니다.
+· 구독은 해지하지 않는 한 각 결제주기마다 자동으로 갱신되며, 갱신 예정일 24시간 전까지 해지하지 않으면 동일한 요금으로 갱신됩니다.
+· 구독 해지는 Apple ID 설정(App Store) 또는 Google Play 앱 내 구독 관리 메뉴에서 언제든지 가능합니다.
+· 구독 해지·환불은 각 스토어 정책 및 당사 환불정책(「환불정책」 탭 참고)을 따릅니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제9조 (서비스의 중단)</div>
+    <div class="section-body">시스템 점검, 천재지변 등 불가피한 사유가 있는 경우 서비스 일부 또는 전부를 중단할 수 있습니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제10조 (책임의 제한)</div>
+    <div class="section-body">회사는 제공되는 정보를 근거로 한 회원의 투자 결정 및 그 결과에 대해 책임지지 않습니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제11조 (저작권)</div>
+    <div class="section-body">서비스 내 콘텐츠에 대한 저작권은 회사에 귀속됩니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제12조 (유사투자자문업 면책)</div>
+    <div class="section-body">회사는 「자본시장법」상 유사투자자문업 신고업체이며, 투자자문업 인가업체가 아닙니다. 제공되는 정보는 투자권유가 아닌 참고자료이며, 투자 판단 및 그 결과에 대한 책임은 전적으로 회원 본인에게 있습니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제13조 (분쟁 해결)</div>
+    <div class="section-body">본 약관과 관련한 분쟁은 회사 소재지 관할 법원을 제1심 관할 법원으로 합니다.</div>
+  </div>
+</div>
+
+<!-- 환불정책 -->
+<div id="refund" class="content">
+  <h2>환불정책</h2>
+  <p class="date">시행일: 2026년 3월 21일 | 주식회사 에이티에스그룹</p>
+
+  <div class="section">
+    <div class="section-title">제1조 (목적)</div>
+    <div class="section-body">본 정책은 회원의 유료 구독(인앱결제) 결제 및 환불에 관한 기준을 정합니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제2조 (청약철회)</div>
+    <div class="section-body">회원은 결제일로부터 7일 이내이고 구독 콘텐츠를 실질적으로 이용하지 않은 경우, 「전자상거래 등에서의 소비자보호에 관한 법률」 제17조에 따라 전액 환불을 요청할 수 있습니다. 다만 해당 기간 중 콘텐츠를 열람·이용한 경우에는 이용한 부분에 대해 환불이 제한될 수 있습니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제3조 (스토어를 통한 환불 신청)</div>
+    <div class="section-body">구독 결제는 Apple App Store 및 Google Play 스토어를 통해 이루어지며, 청약철회·환불은 원칙적으로 각 스토어의 환불 정책 및 절차를 따릅니다.
+
+· Apple: reportaproblem.apple.com 또는 App Store 구입 내역에서 신청
+· Google: Google Play 앱 → 계정 → 결제 및 구독 → 주문 내역에서 환불 요청</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제4조 (자동갱신 구독의 해지)</div>
+    <div class="section-body">구독은 해지하지 않는 한 각 결제주기마다 자동으로 갱신됩니다. 해지 시점 이후 다음 주기부터 갱신되지 않으며, 이미 결제가 완료된 이용기간 동안은 서비스를 계속 이용할 수 있습니다. 해지만으로는 이미 결제된 금액이 환불되지 않으며, 환불은 제2조·제3조 절차를 따릅니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">제5조 (고객센터)</div>
+    <div class="section-body">스토어를 통한 환불이 어려운 경우 아래 고객센터로 문의해 주세요.
+
+· 이메일: ATS@atscorp.kr
+· 전화: 1577-0294
+· 운영시간: 평일 10:00~17:30 (점심 12:00~13:00, 공휴일 제외)</div>
+  </div>
+</div>
+
+<!-- 투자위험고지 -->
+<div id="risk" class="content">
+  <h2>투자위험고지문</h2>
+  <p class="date">시행일: 2026년 3월 21일 | 주식회사 에이티에스그룹</p>
+
+  <div class="section">
+    <div class="section-title">⚠ 중요 안내 사항</div>
+    <div class="section-body">① 당사는 「자본시장법」에 따라 금융위원회에 신고한 유사투자자문업 신고업체이며, 금융위원회의 정식 인가를 받은 '투자자문업자'가 아닙니다. 신고 현황은 금융감독원 파인(fine.fss.or.kr)에서 확인하실 수 있습니다.
+
+② 당사가 제공하는 정보는 불특정다수를 대상으로 한 일반적인 시장정보이며, 특정 회원을 위한 개별 투자자문이 아닙니다.
+
+③ 주식·채권·펀드·파생상품·암호자산 등 모든 투자상품은 원금 손실 위험이 있습니다.
+
+④ 과거의 수익률이나 성과는 미래의 수익을 보장하지 않습니다.
+
+⑤ 투자 손실을 감내하기 어려운 자금으로는 투자하지 마시고, 신중히 재검토하시기 바랍니다.
+
+⑥ 최종 투자 판단 전 독립적인 금융 전문가와 상담하실 것을 권고합니다.
+
+⑦ 당사가 제공하는 정보를 근거로 한 투자 결정 및 그로 인한 손실에 대해, 회사는 원칙적으로 손해배상 책임을 지지 않습니다. 단, 회사의 고의 또는 중대한 과실이 있는 경우는 예외로 합니다.
+
+⑧ 제공되는 모든 정보는 참고용이며, 정확성·완전성을 보장하지 않습니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">사업자 정보</div>
+    <div class="section-body">· 회사명: 주식회사 에이티에스그룹
+· 사업자등록번호: 825-88-03535
+· 유사투자자문업 신고 (신고현황은 금융감독원 파인에서 확인 가능)
+· 대표자: 박진훈
+· 주소: 경북 경주시 양정로 215, 2층</div>
+  </div>
+</div>
+
+<!-- 계정 삭제 (Google Play 데이터 삭제 URL용) -->
 <div id="delete" class="content">
   <h2>계정 및 데이터 삭제 안내</h2>
-  <p class="date">앱: 오늘의 종목 (kr.ats.stockapp) | 개발사: 주식회사 에이티에스그룹</p>
+  <p class="date">앱: 오늘의 종목 (ats.kr.stockapp) | 개발사: 주식회사 에이티에스그룹</p>
 
   <div class="section">
     <div class="section-title">1. 계정 삭제 요청 방법</div>
-    <div class="section-body">「오늘의 종목」 앱 회원은 아래 방법으로 계정 및 관련 데이터 삭제를 요청할 수 있습니다.
+    <div class="section-body">「오늘의 종목」 앱 회원은 아래 방법으로 계정 및 관련 데이터 삭제를 요청할 수 있습니다. 앱 내 [마이 → 회원 탈퇴]에서도 직접 삭제할 수 있습니다.
 
 [방법 1] 이메일 요청 (권장)
 1) ATS@atscorp.kr 로 이메일 발송
 2) 제목: [오늘의종목] 계정 삭제 요청
 3) 본문에 아래 정보 기재
    · 가입 이메일(아이디)
-   · 이름
+   · 닉네임
    · 연락처(휴대폰번호)
    · 삭제 사유(선택)
 
@@ -169,10 +320,9 @@
     <div class="section-body">계정 삭제 시 아래 데이터는 지체 없이 삭제(또는 복구 불가능한 형태로 파기)합니다.
 
 · Firebase Authentication 로그인 계정
-· 회원 프로필(닉네임, 이메일, 전화번호, 생년월일 등)
-· 등업 신청 정보
+· 회원 프로필(닉네임, 이메일, 전화번호 등)
 · 관심종목·북마크 등 개인 이용 기록
-· 푸시 알림(FCM) 토큰
+· 알림 내역 및 푸시 알림(FCM) 토큰
 · 서비스 이용과 직접 연결된 기타 개인정보</div>
   </div>
 
@@ -206,132 +356,12 @@
   </div>
 </div>
 
-<!-- 서비스이용약관 -->
-<div id="terms" class="content">
-  <h2>서비스 이용약관</h2>
-  <p class="date">시행일: 2026년 3월 21일 | 주식회사 에이티에스그룹</p>
-
-  <div class="section">
-    <div class="section-title">제1조 목적</div>
-    <div class="section-body">본 약관은 주식회사 에이티에스그룹이 제공하는 유사투자자문 서비스의 이용 조건 및 절차, 회사와 회원의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.</div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">제2조 용어의 정의</div>
-    <div class="section-body">1. '회사'란 본 서비스를 제공하는 주식회사 에이티에스그룹을 의미합니다.
-2. '회원'이란 본 약관에 동의하여 서비스를 이용하는 개인을 의미합니다.
-3. '서비스'란 회사가 제공하는 투자정보, 투자교육, 상담 등을 포함합니다.
-4. '콘텐츠'란 회사가 제작, 배포하는 모든 형태의 정보 및 자료를 의미합니다.</div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">제3조 서비스의 내용</div>
-    <div class="section-body">회사가 제공하는 서비스는 다음과 같습니다.
-· 투자교육 및 학습 자료 제공
-· 투자정보 분석 및 시장 동향 제공
-· 개인맞춤형 투자전략 수립 지원
-· 온라인 상담 및 커뮤니티
-· 기타 회사가 정하는 서비스</div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">제8조 서비스 이용료</div>
-    <div class="section-body">■ 정회원 (월 평균 6종목 추천)
-  · 1개월+10일: 220,000원
-  · 3개월+10일: 660,000원
-  · 6개월+20일: 1,200,000원
-  · 1년: 2,000,000원
-
-■ 프리미엄 (월 평균 9종목 추천)
-  · 3개월+10일: 900,000원
-  · 6개월+10일: 1,600,000원
-  · 1년: 3,000,000원</div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">제10조 회사의 책임 제한</div>
-    <div class="section-body">회사는 제공된 정보의 정확성, 완전성, 적시성을 보장하지 않으며, 회원이 서비스를 통해 얻은 정보로 인한 투자 손실에 대해 책임을 지지 않습니다.</div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">제12조 유사투자자문업 면책 조항</div>
-    <div class="section-body">1. 본 서비스는 자본시장과 금융투자업에 관한 법률 제7조 제7호에 의한 유사투자자문업으로, 투자자문업(인가)에 해당하지 않습니다.
-2. 회사가 제공하는 모든 정보는 투자의사 결정을 위한 참고용이며, 투자조언 또는 투자자문이 아닙니다.
-3. 투자에 따른 최종 의사결정과 책임은 전적으로 회원 본인에게 있습니다.</div>
-  </div>
-</div>
-
-<!-- 투자위험고지 -->
-<div id="risk" class="content">
-  <h2>투자 위험 고지문</h2>
-  <p class="date">시행일: 2026년 3월 21일 | 주식회사 에이티에스그룹</p>
-
-  <div class="section">
-    <div class="section-title">⚠ 중요 안내 사항</div>
-    <div class="section-body">본 회사는 금융감독위원회로부터 '투자자문업'으로 인가받지 않은 유사투자자문 서비스 제공업체입니다.
-· 본 회사가 제공하는 정보는 '투자자문' 또는 '투자조언'이 아닙니다
-· 본 정보에 기반한 투자 결정은 고객님의 책임입니다
-· 투자 손실에 대해 법적 책임을 지지 않습니다</div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">투자 위험 고지</div>
-    <div class="section-body">모든 투자상품은 원본 손실의 위험이 있습니다.
-· 주식: 시장 변동성, 기업 부도로 인한 전액 손실 가능
-· 채권: 금리 변동, 발행사 신용악화로 인한 손실 가능
-· 파생상품: 레버리지로 인한 원본 초과 손실 가능
-
-과거 성과는 미래 수익을 보장하지 않습니다.
-
-· 회사명: 주식회사 에이티에스그룹
-· 사업자등록번호: 825-88-03535
-· 감독 기관: 금융감독위원회</div>
-  </div>
-</div>
-
-<!-- 환불정책 -->
-<div id="refund" class="content">
-  <h2>환불 정책</h2>
-  <p class="date">시행일: 2026년 3월 21일 | 주식회사 에이티에스그룹</p>
-
-  <div class="section">
-    <div class="section-title">제3조 서비스 종류별 환불 규정</div>
-    <div class="section-body">1. 이용기간으로 계약한 서비스 환불
-· 서비스 이용 시작 전 환불신청 시: 전액 환불
-· 서비스 최초 이용일로부터 14일 이내 환불신청 시: 전액 환불
-· 14일 초과 중도 해지 시: 잔여 기간 비례 환불 (수수료 제외)
-
-2. 유료정보 콘텐츠 환불 (단품 구매)
-콘텐츠를 열람한 순간 서비스가 100% 제공된 것으로 간주하여 원칙적으로 환불 불가</div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">제5조 환불 처리 기간 및 방법</div>
-    <div class="section-body">1. 환불 심사: 환불 요청 접수 후 5영업일 이내 승인 여부 결정
-2. 환불 처리:
-· 신용카드: 5~10 영업일
-· 계좌이체: 1~2 영업일
-· 휴대폰 결제: 당월 요금에서 차감</div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">제7조 고객센터</div>
-    <div class="section-body">· 이메일: ATS@atscorp.kr
-· 전화: 1577-0294
-· 운영 시간: 평일 10:00~17:30 (점심 12:00~13:00, 공휴일 제외)
-· 회사명: 주식회사 에이티에스그룹
-· 사업자등록번호: 825-88-03535
-· 주소: 경북 경주시 양정로 215, 2층
-· 대표자: 박진훈</div>
-  </div>
-</div>
-
 <div class="footer">
   © 2026 주식회사 에이티에스그룹 · ATS@atscorp.kr · 1577-0294
 </div>
 
 <script>
-  const TAB_IDS = ['privacy', 'delete', 'terms', 'risk', 'refund'];
+  const TAB_IDS = ['privacy', 'terms', 'refund', 'risk', 'delete'];
 
   function showTab(id) {
     document.querySelectorAll('.tab').forEach((t, i) => {

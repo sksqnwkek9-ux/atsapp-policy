@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>오늘의 종목 - 법적 문서</title>
+  <!--
+    이 파일은 tool/build_policy_site.py 가 만들어 냅니다.
+    직접 고치지 마세요. 원문은 lib/widgets/app_footer.dart 에 있습니다.
+  -->
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; }
@@ -19,8 +23,8 @@
     .date { font-size: 12px; color: #888; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #eee; }
     .section { margin-bottom: 24px; }
     .section-title { font-size: 15px; font-weight: 800; color: #222; margin-bottom: 10px; padding: 10px 14px; background: #fff5f5; border-left: 4px solid #D30000; border-radius: 0 8px 8px 0; }
-    .section-body { font-size: 13.5px; line-height: 1.85; color: #444; white-space: pre-wrap; padding: 4px 0 0 4px; }
-    .footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #aaa; background: white; border-top: 1px solid #eee; }
+    .section-body { font-size: 13.5px; line-height: 1.85; color: #444; white-space: pre-wrap; padding: 4px 0 0 4px; word-break: break-word; }
+    .footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #aaa; background: white; border-top: 1px solid #eee; line-height: 1.8; }
   </style>
 </head>
 <body>
@@ -33,237 +37,368 @@
 <div class="tabs">
   <div class="tab active" onclick="showTab('privacy')">개인정보처리방침</div>
   <div class="tab" onclick="showTab('terms')">서비스이용약관</div>
+  <div class="tab" onclick="showTab('youth')">청소년보호정책</div>
   <div class="tab" onclick="showTab('refund')">환불정책</div>
   <div class="tab" onclick="showTab('risk')">투자위험고지</div>
   <div class="tab" onclick="showTab('delete')">계정 삭제</div>
 </div>
 
-<!-- 개인정보처리방침 -->
 <div id="privacy" class="content active">
   <h2>개인정보처리방침</h2>
-  <p class="date">시행일: 2026년 3월 21일 | 주식회사 에이티에스그룹</p>
-
+  <p class="date">시행일: 2026년 8월 31일 | 주식회사 에이티에스그룹</p>
   <div class="section">
     <div class="section-title">제1조 (총칙)</div>
     <div class="section-body">본 개인정보처리방침은 당사의 개인정보 처리에 관한 방침을 명시하는 것으로, 「개인정보 보호법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 등 관련 법령을 준수합니다.</div>
   </div>
-
   <div class="section">
     <div class="section-title">제2조 (수집하는 개인정보의 항목)</div>
-    <div class="section-body">· 필수 수집 항목: 아이디, 비밀번호, 닉네임
-· 고객상담 시: 상담내용, 통화기록
-· 인앱결제(구독) 진행 시: 스토어(Apple/Google)가 제공하는 결제 식별정보(개인정보가 아닌 구독 상태 확인용 토큰)</div>
-  </div>
+    <div class="section-body">[회원가입 시 — 가입 수단에 따라 다릅니다]
+· 휴대폰 인증 가입: 휴대폰번호, 닉네임
+· 카카오/구글/Apple 가입: 해당 서비스가 제공하는 회원식별자, 이메일, 프로필 사진(제공에 동의한 항목에 한함), 닉네임, 휴대폰번호
+· 아이디/비밀번호 가입(2026년 이전 가입자): 아이디, 비밀번호, 닉네임, 휴대폰번호
 
+[본인확인 시]
+· 성명, 생년월일, 휴대폰번호, 본인확인 결과값
+
+[서비스 이용 과정에서 자동으로 수집되는 항목]
+· 기기정보(모델명, 운영체제 버전), IP 주소, 접속 일시 및 접속 기록
+· 푸시 알림 토큰(FCM), 광고 식별자(ADID/IDFA)
+· 앱 오류 발생 시 오류 기록
+
+[회원이 직접 입력·저장하는 항목]
+· 프로필 사진, 관심종목, 매매일지, 조사 노트, 모의투자 기록, 댓글, 검색어
+
+[유료 결제 시]
+· 결제 수단 정보는 회사가 보관하지 않으며, 각 앱마켓이 처리합니다. 회사는 결제 확인에 필요한 주문번호·상품명·결제일시만 전달받습니다.
+
+[고객상담 시]
+· 상담 내용, 이메일 주소, 통화 기록</div>
+  </div>
   <div class="section">
     <div class="section-title">제3조 (개인정보의 수집 및 이용 목적)</div>
     <div class="section-body">· 회원가입 및 회원관리
 · 불특정다수 대상 일반 투자정보·시장동향 콘텐츠 제공
-· 구독(인앱결제) 상태 확인 및 콘텐츠 이용 권한 부여
 · 고객상담 및 민원처리
 · 이벤트 및 커뮤니티 안내</div>
   </div>
-
   <div class="section">
     <div class="section-title">제4조 (개인정보의 보유 및 이용 기간)</div>
     <div class="section-body">· 회원가입 및 관리 기록: 서비스 이용 기간
-· 계약·결제·환불 관련 기록: 5년 (전자상거래법 등)
-· 세법 관련 기록: 5년
 · 투자자보호 관련 기록: 5년
-· 그 외 정보: 수집일로부터 최대 1년 이내 보관 후 파기</div>
-  </div>
+· 세법 관련(결제) 기록: 5년
+· 그 외 정보: 수집일로부터 최대 1년 이내 보관 후 파기
 
+[탈퇴 후에도 보관하는 항목]
+· 무료체험 중복 이용 방지를 위한 휴대폰번호의 암호화 값(해시)
+  - 보관 기간: 기간 제한 없이 보관합니다.
+  - 보관 이유: 한 사람이 탈퇴와 재가입을 반복해 무료체험을 여러 번 받는 것을 막기 위함입니다.
+  - 보관 형태: 원래의 휴대폰번호를 복원할 수 없는 단방향 암호화 값으로만 저장하며, 번호 자체는 저장하지 않습니다.
+  - 이용 범위: 무료체험을 이미 이용한 번호인지 확인하는 용도로만 사용하며, 마케팅이나 회원 식별에는 사용하지 않습니다.</div>
+  </div>
   <div class="section">
     <div class="section-title">제5조 (개인정보의 제3자 제공)</div>
-    <div class="section-body">당사는 개인정보를 원칙적으로 제3자에게 제공하지 않습니다. 수집된 개인정보는 당사가 직접 운영하는 서비스(오늘의종목 등) 내부 처리 목적으로만 사용되며, 외부 업체에 제공되지 않습니다. 다만 다음의 경우는 예외입니다.
+    <div class="section-body">당사는 개인정보를 제3자에게 제공하지 않습니다. 다만 다음의 경우는 예외입니다.
 · 본인의 명시적인 동의가 있는 경우
-· 법령의 규정에 의하거나 수사기관으로부터 적법한 절차에 따른 요청이 있는 경우</div>
-  </div>
+· 법령의 규정에 의하거나 수사기관으로부터 적법한 절차에 따른 요청이 있는 경우
 
+[광고 식별자 전송 안내]
+앱 내 광고를 보여주기 위해 광고 식별자(ADID/IDFA)와 기기정보가 광고 네트워크(Google AdMob)로 전송됩니다.
+· 전송 항목: 광고 식별자, 기기정보(모델명, 운영체제 버전)
+· 전송 목적: 광고 게재 및 같은 광고가 반복 노출되지 않도록 하는 빈도 관리
+· 전송되지 않는 항목: 이름, 휴대폰번호, 이메일 등 회원을 직접 알아볼 수 있는 정보는 전송되지 않습니다.
+· 거부 방법: 기기 설정에서 광고 식별자를 초기화하거나 맞춤형 광고를 차단할 수 있습니다.
+  - Android: 설정 → Google → 광고
+  - iOS: 설정 → 개인정보 보호 및 보안 → 추적</div>
+  </div>
   <div class="section">
     <div class="section-title">제6조 (개인정보 처리 위탁)</div>
-    <div class="section-body">당사는 결제 확인 등 일부 업무를 외부 전산업체(예: Google, Apple, Firebase)에 위탁할 수 있으며, 위탁 시 위탁받는 자와 위탁업무 내용을 사전 고지합니다.</div>
-  </div>
+    <div class="section-body">당사는 서비스 제공을 위해 아래와 같이 개인정보 처리 업무를 위탁하고 있습니다.
 
+· Google LLC (Firebase) — 회원 인증, 데이터 보관, 푸시 알림 발송, 앱 오류 수집, 이용 통계
+· Google LLC (Google AdMob) — 광고 게재
+· 네이버클라우드 주식회사 — 휴대폰 인증 문자 발송
+· 주식회사 카카오 — 카카오 계정 로그인 (해당 수단 이용 시)
+· Apple Inc. — Apple 계정 로그인 (해당 수단 이용 시)
+
+위탁 계약 시 개인정보 보호 관련 지시 엄수, 재위탁 제한, 안전성 확보 조치 등을 문서에 명시하고 있으며, 수탁자가 변경되는 경우 지체 없이 본 방침을 통해 공개합니다.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제6조의2 (개인정보의 국외 이전)</div>
+    <div class="section-body">서비스 운영을 위해 아래와 같이 개인정보가 국외로 이전됩니다.
+
+· 이전받는 자: Google LLC
+· 이전되는 국가: 미국
+· 이전 일시 및 방법: 서비스 이용 시점에 네트워크를 통해 전송
+· 이전 항목: 제2조의 수집 항목 중 회원식별자, 휴대폰번호, 기기정보, 접속기록, 푸시 토큰, 회원이 저장한 이용 기록
+· 이용 목적: 회원 인증, 데이터 보관, 푸시 알림 발송
+· 보유 기간: 회원 탈퇴 또는 위탁 계약 종료 시까지
+
+회원은 국외 이전을 거부할 수 있으나, 이 경우 서비스 이용이 제한될 수 있습니다.</div>
+  </div>
   <div class="section">
     <div class="section-title">제7조 (개인정보의 열람, 정정, 삭제)</div>
     <div class="section-body">회원은 자신의 개인정보에 대해 열람, 정정, 삭제를 요청할 수 있습니다.
-· 요청 방법: 고객센터 문의 또는 본 페이지 「계정 삭제」 탭 참고
-· 처리 기간: 요청일로부터 10영업일 이내</div>
+· 요청 방법: 고객센터 문의 / 처리 기간: 요청일로부터 10일 이내</div>
   </div>
-
   <div class="section">
     <div class="section-title">제8조 (개인정보 보호책임자)</div>
-    <div class="section-body">· 성명: 박진훈
-· 직책: 대표
-· 이메일: ATS@atscorp.kr
-· 전화: 1577-0294</div>
+    <div class="section-body">성명: 박진훈 / 직책: 대표 / 이메일: ATS@atscorp.kr / 전화: 1577-0294</div>
   </div>
-
   <div class="section">
     <div class="section-title">제9조 (개인정보 보안)</div>
-    <div class="section-body">· 개인정보는 SSL 또는 TLS 등의 암호화 기술을 이용하여 안전하게 전송됩니다
-· 접근 권한을 제한하고 정기적인 보안 교육을 실시합니다
-· 개인정보를 취급하는 직원은 기밀유지 서약을 체결합니다
-· 주기적인 보안 진단 및 취약점 평가를 실시합니다</div>
+    <div class="section-body">SSL/TLS 암호화 전송, 접근 권한 제한 및 보안 교육, 기밀유지 서약, 주기적 보안 진단</div>
   </div>
-
   <div class="section">
-    <div class="section-title">제10조 (쿠키 등의 기술 정보 수집)</div>
-    <div class="section-body">· IP 주소, 접속 로그, 브라우저 정보, 기기 정보
-· 쿠키: 사용자의 선호도 및 로그인 정보 저장
-· Web Beacon: 방문 통계 수집</div>
+    <div class="section-title">제10조 (쿠키 등 기술 정보 수집)</div>
+    <div class="section-body">IP 주소, 접속 로그, 브라우저 정보, 기기 정보, 쿠키, Web Beacon</div>
   </div>
-
   <div class="section">
     <div class="section-title">제11조 (미성년자 보호)</div>
     <div class="section-body">당사는 만 14세 미만 미성년자의 개인정보를 수집하지 않습니다.</div>
   </div>
-
+  <div class="section">
+    <div class="section-title">제11조의2 (다른 회원에게 공개되는 정보)</div>
+    <div class="section-body">아래 정보는 서비스 특성상 다른 회원에게 공개됩니다. 공개를 원하지 않는 경우 설정에서 랭킹 참여를 해제하거나 해당 기능을 이용하지 않을 수 있습니다.
+· 랭킹: 닉네임, 프로필 사진, 학습 단계, 순위 관련 수치
+· 댓글·채팅: 닉네임, 프로필 사진, 작성 내용
+※ 관심종목의 개별 종목 내역, 매매일지, 조사 노트, 모의투자 보유 내역은 공개되지 않습니다.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제11조의3 (맞춤형 광고)</div>
+    <div class="section-body">당사는 Google AdMob을 통해 광고를 게재하며, 이 과정에서 광고 식별자가 수집·이용될 수 있습니다. 회원은 아래 방법으로 맞춤형 광고를 차단하거나 식별자를 초기화할 수 있습니다.
+· Android: 설정 &gt; Google &gt; 광고 &gt; 광고 ID 재설정 또는 삭제
+· iOS: 설정 &gt; 개인정보 보호 및 보안 &gt; 추적 &gt; 앱이 추적을 요청하도록 허용 해제</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제11조의4 (개인정보의 파기 절차 및 방법)</div>
+    <div class="section-body">보유 기간이 지나거나 처리 목적이 달성된 개인정보는 지체 없이 파기합니다.
+· 전자적 파일: 복구할 수 없는 기술적 방법으로 영구 삭제
+· 종이 문서: 분쇄 또는 소각
+· 법령에 따라 보존해야 하는 정보는 다른 개인정보와 분리하여 보관한 후 보존 기간 경과 시 파기합니다.</div>
+  </div>
   <div class="section">
     <div class="section-title">제12조 (개인정보처리방침의 변경)</div>
-    <div class="section-body">본 개인정보처리방침은 관련 법령의 변경, 서비스 개선 등으로 인하여 변경될 수 있으며, 변경 사항은 앱 내 공지 또는 본 페이지를 통해 최소 7일 이전에 공지합니다.</div>
+    <div class="section-body">변경 사항은 최소 7일 이전 공지합니다. 회원에게 불리한 변경의 경우 최소 30일 이전에 공지합니다.</div>
   </div>
-
   <div class="section">
     <div class="section-title">제13조 (분쟁 해결)</div>
-    <div class="section-body">· 개인정보분쟁조정위원회 (www.kopico.go.kr)
-· 대검찰청 고소수사과 (www.spo.go.kr)
-· 경찰청 사이버수사국 (www.cyber.go.kr)</div>
+    <div class="section-body">개인정보분쟁조정위원회(www.kopico.go.kr), 대검찰청, 경찰청 사이버수사국</div>
   </div>
 </div>
 
-<!-- 서비스이용약관 -->
 <div id="terms" class="content">
   <h2>서비스 이용약관</h2>
-  <p class="date">시행일: 2026년 3월 21일 | 주식회사 에이티에스그룹</p>
-
+  <p class="date">시행일: 2026년 8월 31일 | 주식회사 에이티에스그룹</p>
   <div class="section">
     <div class="section-title">제1조 (목적)</div>
-    <div class="section-body">본 약관은 주식회사 에이티에스그룹(이하 '회사')이 운영하는 '오늘의종목' 서비스의 이용 조건 및 절차를 규정함을 목적으로 합니다.</div>
+    <div class="section-body">본 약관은 주식회사 에이티에스그룹(이하 &#x27;회사&#x27;)이 운영하는 &#x27;오늘의종목&#x27; 서비스의 이용 조건 및 절차를 규정함을 목적으로 합니다.</div>
   </div>
-
   <div class="section">
     <div class="section-title">제2조 (용어 정의)</div>
-    <div class="section-body">1. '회사'란 본 서비스를 제공하는 주식회사 에이티에스그룹을 의미합니다.
-2. '회원'이란 본 약관에 동의하여 서비스를 이용하는 개인을 의미합니다.
-3. '서비스'란 회사가 제공하는 투자정보, 투자교육, 콘텐츠 등을 포함합니다.
-4. '콘텐츠'란 회사가 제작, 배포하는 모든 형태의 정보 및 자료를 의미합니다.</div>
+    <div class="section-body">회사 / 회원 / 서비스 / 콘텐츠의 정의</div>
   </div>
-
   <div class="section">
     <div class="section-title">제3조 (서비스의 내용)</div>
     <div class="section-body">· 투자교육 및 학습 자료 제공
 · 불특정다수를 대상으로 한 일반적인 투자정보 분석 및 시장 동향 제공
-· 종목 추천·일일 리포트 등 콘텐츠 제공 (무료 및 유료 구독)
+· 종목 추천·리포트 등 콘텐츠 제공
+· 국내외 시세·지수·환율 등 시장 정보 제공
+· 뉴스·공시 등 제3자 콘텐츠의 목록 및 원문 링크 제공
+· 관심종목, 목표가 알림, 매매일지, 조사 노트 등 기록 도구 제공
+· 모의투자(가상자금) 기능 제공
+· 학습 단계, 랭킹, 퀴즈 등 참여형 기능 제공
+· 댓글·채팅 등 회원 간 소통 기능 제공
+· 출석 포인트 및 포인트 사용처 제공
 
 ※ 본 서비스는 특정 회원을 대상으로 한 개별 투자자문, 1:1 상담, 맞춤형 투자전략 수립을 제공하지 않습니다. 모든 정보는 불특정다수 회원에게 동일하게 제공되는 일반적 정보입니다.</div>
   </div>
+  <div class="section">
+    <div class="section-title">제3조의2 (시장 정보 및 제3자 콘텐츠)</div>
+    <div class="section-body">① 서비스에서 제공하는 시세·지수·환율·수급 등 시장 정보는 외부 제공처(네이버 금융, Yahoo Finance 등)로부터 받아 표시하는 것으로, 실시간이 아니며 제공처 사정에 따라 지연되거나 오류가 있을 수 있습니다. 실제 거래는 반드시 증권사의 정식 시세와 호가를 확인한 후 진행하시기 바랍니다.
 
+② 뉴스·공시는 각 언론사 및 공시 기관이 작성한 것으로 저작권은 해당 작성자에게 있습니다. 회사는 제목과 출처, 원문 링크를 제공할 뿐이며 그 내용의 정확성·완전성을 보증하지 않습니다.
+
+③ 해외 기사 제목의 한국어 표시는 기계 번역 결과로, 원문과 뜻이 다를 수 있습니다. 정확한 내용은 반드시 원문을 확인하시기 바랍니다.
+
+④ 회사는 제3자 콘텐츠의 오류·지연·중단으로 인해 회원에게 발생한 손해에 대해 책임을 지지 않습니다. 다만 회사의 고의 또는 중대한 과실이 있는 경우는 그러하지 아니합니다.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제3조의3 (모의투자)</div>
+    <div class="section-body">① 모의투자는 가상의 자금으로 이루어지는 학습용 기능이며, 실제 매매와 무관하고 실제 금전의 입출금이 발생하지 않습니다.
+② 모의투자 결과는 체결 방식·수수료·세금·슬리피지 등이 실제와 다르게 처리되므로, 실제 투자 성과를 보장하거나 예측하지 않습니다.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제3조의4 (포인트)</div>
+    <div class="section-body">① 포인트는 출석 등 서비스 이용에 대해 회사가 무상으로 부여하는 것으로, 재산적 가치가 없습니다.
+② 포인트는 현금·상품권 등으로 환전하거나 제3자에게 양도·대여할 수 없습니다.
+③ 포인트는 회사가 정한 사용처에서만 사용할 수 있으며, 사용처와 필요 포인트는 변경될 수 있습니다.
+④ 회원 탈퇴 시 보유 포인트와 포인트로 교환한 항목은 즉시 소멸하며 복구되지 않습니다.
+⑤ 부정한 방법으로 취득한 포인트는 회수될 수 있습니다.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제3조의5 (무료체험)</div>
+    <div class="section-body">① 회사는 신규 회원 등에게 일정 기간 유료 콘텐츠를 무료로 제공할 수 있습니다.
+② 무료체험은 1인 1회에 한하며, 본인 확인된 휴대폰번호를 기준으로 중복 여부를 판단합니다.
+③ 무료체험 기간이 끝나면 자동으로 종료되며, 별도의 결제나 자동 갱신은 이루어지지 않습니다.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제3조의6 (회원 게시물 및 커뮤니티)</div>
+    <div class="section-body">① 댓글·채팅 등 회원이 작성한 게시물의 책임은 작성한 회원에게 있습니다.
+② 회사는 다음에 해당하는 게시물을 사전 통지 없이 삭제하거나 이용을 제한할 수 있습니다.
+· 특정 종목의 매수·매도를 권유하거나 수익을 보장하는 내용
+· 허위 사실, 시세 조종을 목적으로 하는 내용
+· 욕설·차별·비방, 음란물, 도박·대출 등 불법 광고
+· 타인의 개인정보나 저작물을 무단으로 게시하는 내용
+③ 회원은 부적절한 게시물을 신고할 수 있으며, 회사는 확인 후 조치합니다.
+④ 회사는 회원이 작성한 게시물을 서비스 운영·개선 및 홍보 목적으로 활용할 수 있으며, 이 경우 닉네임 외의 개인정보는 노출하지 않습니다.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제3조의7 (랭킹 및 참여형 기능)</div>
+    <div class="section-body">① 랭킹에는 닉네임·프로필 사진·학습 단계·순위 관련 수치가 다른 회원에게 공개됩니다.
+② 회사는 부정한 방법으로 기록을 만든 것으로 확인된 회원의 기록을 삭제하거나 랭킹 참여를 제한할 수 있습니다. 이 경우에도 그 밖의 서비스 이용은 제한되지 않습니다.
+③ 랭킹의 수익률은 회원이 담아둔 시점을 기준으로 계산한 참고 수치이며, 실제 투자 성과가 아닙니다.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제3조의8 (광고)</div>
+    <div class="section-body">서비스에는 광고가 포함될 수 있습니다. 광고의 내용은 광고주의 책임이며, 회사는 회원과 광고주 간 거래에 관여하지 않습니다.</div>
+  </div>
   <div class="section">
     <div class="section-title">제4조 (약관의 변경)</div>
-    <div class="section-body">공지 후 7일 경과 시 효력이 발생합니다.</div>
+    <div class="section-body">공지 후 7일 경과 시 효력 발생</div>
   </div>
-
+  <div class="section">
+    <div class="section-title">제4조의2 (이용 자격)</div>
+    <div class="section-body">① 만 14세 미만은 회원으로 가입할 수 없습니다.
+② 만 19세 미만 회원은 유료 결제 시 법정대리인의 동의를 받아야 하며, 동의 없이 이루어진 결제는 본인 또는 법정대리인이 취소할 수 있습니다.</div>
+  </div>
   <div class="section">
     <div class="section-title">제5조 (회원의 의무)</div>
     <div class="section-body">정확한 정보 제공, 비밀번호 관리, 관계 법령 준수</div>
   </div>
-
   <div class="section">
     <div class="section-title">제6조 (회원의 금지행위)</div>
     <div class="section-body">사칭, 폭언, 불법 콘텐츠 게시, 해킹, 저작권 침해</div>
   </div>
-
   <div class="section">
     <div class="section-title">제7조 (회원 탈퇴)</div>
-    <div class="section-body">탈퇴 시 법정 보존 기간을 제외한 개인정보를 즉시 삭제합니다.</div>
+    <div class="section-body">탈퇴 시 법정 보존 기간을 제외한 개인정보 즉시 삭제</div>
   </div>
-
   <div class="section">
     <div class="section-title">제8조 (구독 서비스 이용료)</div>
-    <div class="section-body">본 서비스의 일부 콘텐츠는 무료로 제공되며, 스탠다드·프로 구독은 Apple App Store 및 Google Play 인앱결제(자동갱신 구독)를 통해 이용할 수 있습니다.
-
-· 구독 등급: 스탠다드, 프로
-· 결제 주기: 1주 체험 / 1개월 / 6개월 / 1년 (등급별 상이)
-· 정확한 상품별 가격은 실제 결제가 이루어지는 각 스토어(App Store / Google Play) 내 구독 화면에 표시된 가격을 기준으로 하며, 스토어 정책에 따라 사전 고지 후 변경될 수 있습니다.
+    <div class="section-body">본 서비스의 일부 콘텐츠는 무료로 제공되며, 프로 구독은 Google Play / App Store 인앱결제(자동갱신 구독)를 통해 이용할 수 있습니다.
+· 구독 등급: 프로 (유료) — 무료 회원은 별도 결제 없이 무료 콘텐츠를 이용합니다.
+· 결제 주기: 1개월 (월간 자동갱신)
+· 상품별 가격은 결제가 이루어지는 Google Play / App Store 구독 화면에 표시된 가격을 기준으로 합니다.
 · 구독은 해지하지 않는 한 각 결제주기마다 자동으로 갱신되며, 갱신 예정일 24시간 전까지 해지하지 않으면 동일한 요금으로 갱신됩니다.
-· 구독 해지는 Apple ID 설정(App Store) 또는 Google Play 앱 내 구독 관리 메뉴에서 언제든지 가능합니다.
-· 구독 해지·환불은 각 스토어 정책 및 당사 환불정책(「환불정책」 탭 참고)을 따릅니다.</div>
+· 구독 해지는 Google Play 또는 App Store의 구독 관리 에서 언제든지 가능합니다.
+· 구독 해지·환불은 Google Play / App Store 정책 및 당사 환불정책을 따릅니다.</div>
   </div>
-
   <div class="section">
     <div class="section-title">제9조 (서비스의 중단)</div>
-    <div class="section-body">시스템 점검, 천재지변 등 불가피한 사유가 있는 경우 서비스 일부 또는 전부를 중단할 수 있습니다.</div>
+    <div class="section-body">시스템 점검, 천재지변 등 불가피한 사유 시 서비스 일부 또는 전부 중단 가능</div>
   </div>
-
   <div class="section">
     <div class="section-title">제10조 (책임의 제한)</div>
     <div class="section-body">회사는 제공되는 정보를 근거로 한 회원의 투자 결정 및 그 결과에 대해 책임지지 않습니다.</div>
   </div>
-
   <div class="section">
     <div class="section-title">제11조 (저작권)</div>
-    <div class="section-body">서비스 내 콘텐츠에 대한 저작권은 회사에 귀속됩니다.</div>
+    <div class="section-body">① 회사가 직접 제작한 콘텐츠(리포트, 학습 자료, 종목 분석 등)의 저작권은 회사에 귀속됩니다.
+② 뉴스·공시·시세 등 외부에서 받아 표시하는 정보의 권리는 해당 제공처에 있습니다.
+③ 회원이 작성한 게시물의 저작권은 작성한 회원에게 있습니다.
+④ 회원은 회사의 콘텐츠를 무단으로 복제·배포·전송하거나 영리 목적으로 이용할 수 없습니다.</div>
   </div>
-
   <div class="section">
     <div class="section-title">제12조 (유사투자자문업 면책)</div>
     <div class="section-body">회사는 「자본시장법」상 유사투자자문업 신고업체이며, 투자자문업 인가업체가 아닙니다. 제공되는 정보는 투자권유가 아닌 참고자료이며, 투자 판단 및 그 결과에 대한 책임은 전적으로 회원 본인에게 있습니다.</div>
   </div>
-
   <div class="section">
     <div class="section-title">제13조 (분쟁 해결)</div>
     <div class="section-body">본 약관과 관련한 분쟁은 회사 소재지 관할 법원을 제1심 관할 법원으로 합니다.</div>
   </div>
 </div>
 
-<!-- 환불정책 -->
+<div id="youth" class="content">
+  <h2>청소년보호정책</h2>
+  <p class="date">시행일: 2026년 8월 31일 | 주식회사 에이티에스그룹</p>
+  <div class="section">
+    <div class="section-title">제1조 (목적)</div>
+    <div class="section-body">주식회사 에이티에스 그룹(이하 &#x27;회사&#x27;)은 청소년이 유해한 정보로부터 보호받을 수 있도록 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」에 따라 본 정책을 수립하고 시행합니다.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제2조 (가입 제한)</div>
+    <div class="section-body">회사는 만 14세 미만의 가입을 받지 않습니다. 가입 과정에서 만 14세 미만으로 확인되는 경우 가입이 제한되며, 가입 후 확인되는 경우 이용이 정지될 수 있습니다.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제3조 (유해정보에 대한 조치)</div>
+    <div class="section-body">회사는 회원이 작성한 게시물 중 다음에 해당하는 내용을 발견하거나 신고받은 경우 지체 없이 삭제하고, 작성자의 이용을 제한할 수 있습니다.
+· 도박·사행행위를 조장하거나 관련 사이트를 광고하는 내용
+· 음란물, 성매매를 암시하거나 알선하는 내용
+· 불법 대출, 불법 금융 상품을 광고하는 내용
+· 욕설·차별·비방 등 타인의 인격을 침해하는 내용
+· 마약·자살·폭력을 조장하는 내용</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제4조 (유해정보 차단)</div>
+    <div class="section-body">회사는 외부에서 가져오는 뉴스·검색어 등에 도박·성인·불법 금융 광고가 섞여 들어오지 않도록 걸러내는 절차를 두고 있으며, 걸러지지 않은 내용을 발견한 경우 확인 후 즉시 조치합니다.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제5조 (청소년 보호를 위한 안내)</div>
+    <div class="section-body">회사가 제공하는 정보는 투자 참고용이며, 투자에는 원금 손실 위험이 있습니다. 미성년 회원은 유료 결제 시 법정대리인의 동의를 받아야 합니다.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제6조 (신고 방법)</div>
+    <div class="section-body">유해한 게시물을 발견하신 경우 게시물의 신고 기능을 이용하시거나 아래로 연락해 주시기 바랍니다.
+· 이메일: ATS@atscorp.kr
+· 전화: 1577-0294</div>
+  </div>
+  <div class="section">
+    <div class="section-title">제7조 (청소년보호 책임자)</div>
+    <div class="section-body">· 성명: 박진훈
+· 직책: 대표
+· 이메일: ATS@atscorp.kr
+· 전화: 1577-0294</div>
+  </div>
+</div>
+
 <div id="refund" class="content">
   <h2>환불정책</h2>
-  <p class="date">시행일: 2026년 3월 21일 | 주식회사 에이티에스그룹</p>
-
+  <p class="date">시행일: 2026년 8월 31일 | 주식회사 에이티에스그룹</p>
   <div class="section">
     <div class="section-title">제1조 (목적)</div>
     <div class="section-body">본 정책은 회원의 유료 구독(인앱결제) 결제 및 환불에 관한 기준을 정합니다.</div>
   </div>
-
   <div class="section">
     <div class="section-title">제2조 (청약철회)</div>
-    <div class="section-body">회원은 결제일로부터 7일 이내이고 구독 콘텐츠를 실질적으로 이용하지 않은 경우, 「전자상거래 등에서의 소비자보호에 관한 법률」 제17조에 따라 전액 환불을 요청할 수 있습니다. 다만 해당 기간 중 콘텐츠를 열람·이용한 경우에는 이용한 부분에 대해 환불이 제한될 수 있습니다.</div>
+    <div class="section-body">회원은 다음 중 어느 하나에 해당하는 경우 「전자상거래 등에서의 소비자보호에 관한 법률」 제17조에 따라 전액 환불을 요청할 수 있습니다.
+· 구독 콘텐츠를 이용하기 전에 환불을 요청한 경우
+· 구독 콘텐츠를 최초로 이용한 날부터 14일 이내에 환불을 요청한 경우
+위 기간이 지난 뒤의 중도 해지는 이미 이용한 기간에 해당하는 금액을 공제하고 환불하며, 구체적인 산정 방식은 회사의 환불정책에 따릅니다.</div>
   </div>
-
   <div class="section">
     <div class="section-title">제3조 (스토어를 통한 환불 신청)</div>
-    <div class="section-body">구독 결제는 Apple App Store 및 Google Play 스토어를 통해 이루어지며, 청약철회·환불은 원칙적으로 각 스토어의 환불 정책 및 절차를 따릅니다.
-
-· Apple: reportaproblem.apple.com 또는 App Store 구입 내역에서 신청
-· Google: Google Play 앱 → 계정 → 결제 및 구독 → 주문 내역에서 환불 요청</div>
+    <div class="section-body">구독 결제는 Google Play / App Store을 통해 이루어지며, 청약철회·환불은 원칙적으로 Google Play / App Store의 환불 정책 및 절차를 따릅니다.
+· 신청 방법(Google Play): Google Play 앱 → 계정 → 결제 및 구독 → 주문 내역에서 환불 요청
+· 신청 방법(App Store): reportaproblem.apple.com 또는 App Store 구입 내역에서 신청</div>
   </div>
-
   <div class="section">
     <div class="section-title">제4조 (자동갱신 구독의 해지)</div>
     <div class="section-body">구독은 해지하지 않는 한 각 결제주기마다 자동으로 갱신됩니다. 해지 시점 이후 다음 주기부터 갱신되지 않으며, 이미 결제가 완료된 이용기간 동안은 서비스를 계속 이용할 수 있습니다. 해지만으로는 이미 결제된 금액이 환불되지 않으며, 환불은 제2조·제3조 절차를 따릅니다.</div>
   </div>
-
   <div class="section">
     <div class="section-title">제5조 (고객센터)</div>
-    <div class="section-body">스토어를 통한 환불이 어려운 경우 아래 고객센터로 문의해 주세요.
-
+    <div class="section-body">스토어를 통한 환불이 어려운 경우 아래로 문의해 주세요.
 · 이메일: ATS@atscorp.kr
 · 전화: 1577-0294
 · 운영시간: 평일 10:00~17:30 (점심 12:00~13:00, 공휴일 제외)</div>
   </div>
 </div>
 
-<!-- 투자위험고지 -->
 <div id="risk" class="content">
   <h2>투자위험고지문</h2>
-  <p class="date">시행일: 2026년 3월 21일 | 주식회사 에이티에스그룹</p>
-
+  <p class="date">시행일: 2026년 8월 31일 | 주식회사 에이티에스그룹</p>
   <div class="section">
-    <div class="section-title">⚠ 중요 안내 사항</div>
-    <div class="section-body">① 당사는 「자본시장법」에 따라 금융위원회에 신고한 유사투자자문업 신고업체이며, 금융위원회의 정식 인가를 받은 '투자자문업자'가 아닙니다. 신고 현황은 금융감독원 파인(fine.fss.or.kr)에서 확인하실 수 있습니다.
+    <div class="section-body">① 당사는 「자본시장법」에 따라 금융위원회에 신고한 유사투자자문업 신고업체이며, 금융위원회의 정식 인가를 받은 &#x27;투자자문업자&#x27;가 아닙니다. 신고 현황은 금융감독원 파인(fine.fss.or.kr)에서 확인하실 수 있습니다.
 
 ② 당사가 제공하는 정보는 불특정다수를 대상으로 한 일반적인 시장정보이며, 특정 회원을 위한 개별 투자자문이 아닙니다.
 
@@ -275,37 +410,37 @@
 
 ⑥ 최종 투자 판단 전 독립적인 금융 전문가와 상담하실 것을 권고합니다.
 
-⑦ 당사가 제공하는 정보를 근거로 한 투자 결정 및 그로 인한 손실에 대해, 회사는 원칙적으로 손해배상 책임을 지지 않습니다. 단, 회사의 고의 또는 중대한 과실이 있는 경우는 예외로 합니다.
+⑦ 사업자 정보
+주식회사 에이티에스그룹 / 사업자등록번호: 825-88-03535 / 유사투자자문업 신고 (신고현황은 금융감독원 파인에서 확인 가능)
 
-⑧ 제공되는 모든 정보는 참고용이며, 정확성·완전성을 보장하지 않습니다.</div>
-  </div>
+⑧ 당사가 제공하는 정보를 근거로 한 투자 결정 및 그로 인한 손실에 대해, 회사는 원칙적으로 손해배상 책임을 지지 않습니다. 단, 회사의 고의 또는 중대한 과실이 있는 경우는 예외로 합니다.
 
-  <div class="section">
-    <div class="section-title">사업자 정보</div>
-    <div class="section-body">· 회사명: 주식회사 에이티에스그룹
-· 사업자등록번호: 825-88-03535
-· 유사투자자문업 신고 (신고현황은 금융감독원 파인에서 확인 가능)
-· 대표자: 박진훈
-· 주소: 경북 경주시 양정로 215, 2층</div>
+⑨ 제공되는 모든 정보는 참고용이며, 정확성·완전성을 보장하지 않습니다.
+
+⑩ 시세·지수·환율·수급 등 시장 정보는 외부 제공처로부터 받아 표시하는 것으로 실시간이 아니며, 지연되거나 오류가 있을 수 있습니다. 실제 거래 전에는 반드시 증권사의 정식 시세를 확인하시기 바랍니다.
+
+⑪ 모의투자는 가상자금으로 이루어지는 학습용 기능입니다. 체결 방식·수수료·세금 등이 실제와 다르므로, 모의투자 성과가 실제 투자 성과를 보장하거나 예측하지 않습니다.
+
+⑫ 랭킹에 표시되는 수익률은 회원이 종목을 담아둔 시점을 기준으로 계산한 참고 수치이며, 실제 매매를 통해 실현된 손익이 아닙니다.
+
+⑬ 회원 간 댓글·채팅에 게시된 내용은 작성자 개인의 의견이며 회사의 견해가 아닙니다. 특정 종목의 매수·매도를 권유하는 게시물을 신뢰하여 발생한 손실에 대해 회사는 책임지지 않습니다.</div>
   </div>
 </div>
 
-<!-- 계정 삭제 (Google Play 데이터 삭제 URL용) -->
 <div id="delete" class="content">
   <h2>계정 및 데이터 삭제 안내</h2>
   <p class="date">앱: 오늘의 종목 (ats.kr.stockapp) | 개발사: 주식회사 에이티에스그룹</p>
 
   <div class="section">
     <div class="section-title">1. 계정 삭제 요청 방법</div>
-    <div class="section-body">「오늘의 종목」 앱 회원은 아래 방법으로 계정 및 관련 데이터 삭제를 요청할 수 있습니다. 앱 내 [마이 → 회원 탈퇴]에서도 직접 삭제할 수 있습니다.
+    <div class="section-body">앱 안에서 [마이 → 설정 → 회원 탈퇴]로 직접 삭제하실 수 있습니다. 앱을 이용할 수 없는 경우 아래로 요청해 주세요.
 
-[방법 1] 이메일 요청 (권장)
+[방법 1] 이메일 요청
 1) ATS@atscorp.kr 로 이메일 발송
 2) 제목: [오늘의종목] 계정 삭제 요청
 3) 본문에 아래 정보 기재
-   · 가입 이메일(아이디)
+   · 가입에 사용한 휴대폰번호 또는 아이디
    · 닉네임
-   · 연락처(휴대폰번호)
    · 삭제 사유(선택)
 
 [방법 2] 전화 요청
@@ -317,69 +452,70 @@
 
   <div class="section">
     <div class="section-title">2. 삭제되는 데이터</div>
-    <div class="section-body">계정 삭제 시 아래 데이터는 지체 없이 삭제(또는 복구 불가능한 형태로 파기)합니다.
+    <div class="section-body">계정 삭제 시 아래 데이터는 지체 없이 삭제하거나 복구할 수 없는 형태로 파기합니다.
 
-· Firebase Authentication 로그인 계정
-· 회원 프로필(닉네임, 이메일, 전화번호 등)
-· 관심종목·북마크 등 개인 이용 기록
-· 알림 내역 및 푸시 알림(FCM) 토큰
-· 서비스 이용과 직접 연결된 기타 개인정보</div>
+· 로그인 계정 및 회원 프로필(닉네임, 프로필 사진, 휴대폰번호 등)
+· 관심종목, 목표가 알림, 스크랩
+· 매매일지, 조사 노트, 모의투자 기록
+· 학습 진도와 단계, 랭킹 기록
+· 보유 포인트 및 포인트로 교환한 항목
+· 작성한 댓글 및 채팅 기록
+· 푸시 알림 토큰</div>
   </div>
 
   <div class="section">
-    <div class="section-title">3. 보관되는 데이터 (법령에 따른 보존)</div>
-    <div class="section-body">관련 법령에 따라 아래 정보는 일정 기간 보관될 수 있습니다. 보관 기간 경과 후 지체 없이 파기합니다.
+    <div class="section-title">3. 법령에 따라 보관하는 데이터</div>
+    <div class="section-body">아래 정보는 관계 법령에 따라 정해진 기간 동안 다른 개인정보와 분리해 보관한 뒤 파기합니다.
 
-· 계약·결제·환불 관련 기록: 5년 (전자상거래법 등)
-· 세법상 거래 기록: 5년
-· 투자자 보호·분쟁 처리 관련 기록: 5년
-· 수사·소송 등 법적 의무가 있는 경우: 해당 의무 기간까지
+· 투자자 보호 관련 기록: 5년
+· 결제·세법 관련 기록: 5년
 
-※ 익명화·통계 목적 데이터는 개인을 식별할 수 없는 형태로만 보관될 수 있습니다.</div>
+보관 기간이 지나면 지체 없이 파기합니다.</div>
   </div>
 
   <div class="section">
     <div class="section-title">4. 처리 기간</div>
-    <div class="section-body">· 삭제 요청 접수 후 본인 확인: 1~3영업일
-· 계정 및 데이터 삭제 완료: 요청일로부터 최대 10영업일 이내
-· 완료 시 등록 이메일 또는 SMS로 안내</div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">5. 문의</div>
-    <div class="section-body">· 앱명: 오늘의 종목
-· 개발사: 주식회사 에이티에스그룹
-· 대표: 박진훈
-· 이메일: ATS@atscorp.kr
-· 전화: 1577-0294
-· 주소: 경북 경주시 양정로 215, 2층</div>
+    <div class="section-body">앱에서 직접 탈퇴하시면 즉시 처리됩니다. 이메일·전화로 요청하신 경우 본인 확인 후 10일 이내에 처리합니다.</div>
   </div>
 </div>
 
 <div class="footer">
-  © 2026 주식회사 에이티에스그룹 · ATS@atscorp.kr · 1577-0294
+  주식회사 에이티에스 그룹 · 대표이사 박진훈 · 사업자등록번호 825-88-03535<br>
+  경상북도 경주시 양정로 215 2F · ATS@atscorp.kr · 1577-0294<br>
+  ⓒ 2026 주식회사 에이티에스 그룹. All rights reserved.
 </div>
 
 <script>
-  const TAB_IDS = ['privacy', 'terms', 'refund', 'risk', 'delete'];
+function showTab(id) {
+  document.querySelectorAll('.content').forEach(function (el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('.tab').forEach(function (el) {
+    el.classList.remove('active');
+  });
+  document.getElementById(id).classList.add('active');
+  event.currentTarget.classList.add('active');
+  window.scrollTo(0, 0);
+}
 
-  function showTab(id) {
-    document.querySelectorAll('.tab').forEach((t, i) => {
-      t.classList.toggle('active', TAB_IDS[i] === id);
+// 앱에서 특정 문서로 바로 보낼 수 있게 #terms 같은 해시를 지원한다.
+if (location.hash) {
+  var el = document.getElementById(location.hash.slice(1));
+  if (el) {
+    document.querySelectorAll('.content').forEach(function (c) {
+      c.classList.remove('active');
     });
-    document.querySelectorAll('.content').forEach(c => {
-      c.classList.toggle('active', c.id === id);
+    document.querySelectorAll('.tab').forEach(function (t) {
+      t.classList.remove('active');
     });
-    window.scrollTo(0, 0);
-    if (history.replaceState) {
-      history.replaceState(null, '', id === 'privacy' ? location.pathname : '#' + id);
-    }
+    el.classList.add('active');
+    var i = Array.prototype.indexOf.call(
+      document.querySelectorAll('.content'), el);
+    var tab = document.querySelectorAll('.tab')[i];
+    if (tab) tab.classList.add('active');
   }
-
-  (function initTabFromHash() {
-    const hash = location.hash.replace('#', '');
-    if (TAB_IDS.includes(hash)) showTab(hash);
-  })();
+}
 </script>
+
 </body>
 </html>
